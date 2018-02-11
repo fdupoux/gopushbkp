@@ -1,3 +1,18 @@
+# This is an example of a configuration file for gopushpkp. This file must be
+# located either in the same directory as the application binary or in the
+# current directory at the time the program is executed.
+
+# If you reuse the following example configuration the program will create
+# an archive named /mnt/backup/mybackup-YYYYMMDD-HHMMSS.zip.gpg and this archive
+# will contain all contents from /mnt/data except the ".git" directory and any
+# file or directory named "*.tmp". The archive would be encrypted using the
+# public key from /home/myself/public-key.txt. After the archive has been
+# created it would be uploaded to AWS S3 in a bucket named "my-bucket-name"
+# which is located in the "eu-west-1" region. And the archive would be prefixed
+# with "/backup/databkp/" so the archive in the bucket looks like it is located
+# in this directory structure. Technically this prefix is part of the name of
+# the object in the S3 bucket, but it looks like directories when you look at it
+
 # Path of the local directory which contains the data files
 datarootdir = "/mnt/data"
 
