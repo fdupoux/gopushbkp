@@ -1,0 +1,21 @@
+# Path of the local directory which contains the data files
+datarootdir = "/mnt/data"
+
+# Local directory where to create new backup archives
+bkparchdir = "/mnt/backup"
+
+# Prefix to use in the file name of the backup archives
+bkpbasename = "mybackup"
+
+# Path to the file which contains the GnuPG public key
+pubkeyfile = "/home/myself/public-key.txt"
+
+# Files or directories to excludes from the archive
+excludes = [".git", "*.tmp"]
+
+# AWS bucket and access details to upload backups
+aws_region = "eu-west-1"
+aws_bucket = "my-bucket-name"
+aws_access = "MyAwsAccessKeyId"
+aws_secret = "MyAwsAccessKeySecret"
+aws_prefix = "/backup/databkp/"
