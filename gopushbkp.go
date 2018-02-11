@@ -21,10 +21,14 @@ import (
 )
 
 var config configuration
+var version = "0.1.0"
 
 func main() {
 
 	var err error
+
+	// Print version number
+	fmt.Printf("gopushbkp-%s\n", version)
 
 	// Read configuration file
 	config, err = readConfig()
