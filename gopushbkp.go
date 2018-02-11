@@ -14,7 +14,7 @@ func main() {
 	// Read configuration file
 	config, err = readConfig()
 	if err != nil {
-		fmt.Printf("Failed to read configuration file\n")
+		fmt.Printf("Failed to read configuration file: %s\n", err)
 		os.Exit(1)
 	}
 
