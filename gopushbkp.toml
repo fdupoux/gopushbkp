@@ -15,6 +15,9 @@
 # in this directory structure. Technically this prefix is part of the name of
 # the object in the S3 bucket, but it looks like directories when you look at it
 
+# If you run this program on Windows then backslashes must be doubled in paths
+# such as D:\\Data\\Mydata
+
 # Path of the local directory which contains the data files
 datarootdir = "/mnt/data"
 

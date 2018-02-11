@@ -34,7 +34,11 @@ func archiveDirectory(rootdir string, archive *zip.Writer, excludes []string) er
 
 	for _, file := range files {
 		filename := file.Name()
-		fullpath := filepath.Join(rootdir, file.Name())
+		fullpath := filepath.Join(rootdir, filename)
+
+		// Normalize path on Windows (remove volume name and convert backslashes to forward slashes)
+		fullpath = strings.TrimPrefix(fullpath, filepath.VolumeName(fullpath))
+		fullpath = filepath.ToSlash(fullpath)
 
 		// Check exclusions
 		skipfile := false
